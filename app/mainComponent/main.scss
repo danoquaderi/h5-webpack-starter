@@ -5,13 +5,6 @@
   position: relative;
 }
 
-.pagination {
-  .bulletActive {
-    opacity: 1;
-    background: lighten($bgc, 10%);
-  }
-}
-
 .slide {
   display: flex;
   flex-direction: column;

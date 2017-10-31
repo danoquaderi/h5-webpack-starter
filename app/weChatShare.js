@@ -12,8 +12,8 @@ let
   defaultData = {
     imgUrl: window.location.href.replace(/\/[^/]*$/g, '') + '/' + weChatSharePic,
     link: window.location.href.replace(/(\?|#).*/g, ''),
-    title: 'H5 Webpack Starter',
-    desc: 'H5 webpack starter for webpack, gulp, es6/7, sass, pug, swiper, jsmpeg...',
+    title: '分享标题',
+    desc: '分享小标题',
   };
 
 // WechatSDK

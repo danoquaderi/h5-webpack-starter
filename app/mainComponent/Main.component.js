@@ -6,17 +6,11 @@ import slides from './sildes.pug';
 import mainStyle from './main.scss';
 
 // audio
-// import audioSrc from '../../static/media/Richard Clayderman - LOVE IS BLUE.mp3';
+// import audioSrc from '../../static/media/ ';
 
 let audioSrc = 'https://raw.githubusercontent.com/cycjimmy/staticFiles/storage/media/Richard_Clayderman-LOVE_IS_BLUE.mp3';
 
 // component
-import CoverComponent from './cover/Cover.component';
-import SwiperDemoComponent from './swiperDemo/SwiperDemo.component';
-import ImageCompressUploadDemoComponent from './imageCompressUploadDemo/ImageCompressUploadDemo.component';
-import JsmpegDemoComponent from './jsmpegDemo/JsmpegDemo.component';
-import H5videoPlayerDemoComponent from './h5videoPlayerDemo/H5videoPlayerDemo.component';
-import WebglDemoComponent from './webglDemo/WebglDemo.component';
 import SlideXComponent from './slideXComponent/SlideX.component';
 
 import H5AudioControls from 'h5-audio-controls';
@@ -58,13 +52,17 @@ export default class extends Component {
         return new Promise(resolve => {
           // Swiper
           this.mainSwiper = new Swiper(this.context, {
-            pagination: '.' + _style.pagination,
-            paginationClickable: true,
-            bulletActiveClass: _style.bulletActive,
-
             direction: 'vertical',
-            mousewheelControl: true,
             wrapperClass: _style.wrapper,
+
+            // effect: 'fade',
+            // fade: {
+            //   crossFade: true,
+            // },
+            // speed: 1000,
+            //
+            // noSwiping: true,
+            // noSwipingClass: _style.slide,
 
             hashnav: true,
             hashnavWatchState: true,
@@ -116,12 +114,6 @@ export default class extends Component {
 let
   _style = mainStyle
   , SlideComponents = [
-    CoverComponent,
-    SwiperDemoComponent,
-    ImageCompressUploadDemoComponent,
-    JsmpegDemoComponent,
-    H5videoPlayerDemoComponent,
-    WebglDemoComponent,
     SlideXComponent,
   ]
 ;

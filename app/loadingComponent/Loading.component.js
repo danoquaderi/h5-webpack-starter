@@ -1,5 +1,5 @@
 // image
-import loadingImg from '../../static/images/loading.svg';
+import loadingImg from './subao_logo.svg';
 
 // style
 import _style from './loading.scss';
