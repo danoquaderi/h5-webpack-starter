@@ -56,35 +56,26 @@ export default class extends Component {
             wrapperClass: _style.wrapper,
 
             // effect: 'fade',
-            // fade: {
-            //   crossFade: true,
+            // fadeEffect: {
+            //   crossFade: false,
             // },
             // speed: 1000,
-            //
+
             // noSwiping: true,
             // noSwipingClass: _style.slide,
 
-            hashnav: true,
-            hashnavWatchState: true,
-            replaceState: true,
-
-            onInit: (swiper) => {
-              setTimeout(() => {
-                this.renderSlideComponents()
-                  .then(() => {
-                    return this.audioComponent.load();
-                  })
-                  .then(() => {
-                    return new loadingOverlayServiceIns().doRemove();
-                  })
-                  .then(() => {
-                    new SwiperAnimateServiceIns().cache(swiper);
-                    new SwiperAnimateServiceIns().animate(swiper);
-                  });
-              }, 0);
+            hashNavigation: {
+              watchState: true,
+              replaceState: true,
             },
-            onSlideChangeEnd: (swiper) => {
-              new SwiperAnimateServiceIns().animate(swiper);
+
+            on: {
+              init: () => this.renderSlideComponents()
+                .then(() => this.audioComponent.load())
+                .then(() => new loadingOverlayServiceIns().doRemove())
+                .then(() => setTimeout(() => new SwiperAnimateServiceIns().animate(this.mainSwiper), 0)),
+
+              slideChange: () => setTimeout(() => new SwiperAnimateServiceIns().animate(this.mainSwiper), 0),
             },
           });
 
