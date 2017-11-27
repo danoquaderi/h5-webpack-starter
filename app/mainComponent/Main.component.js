@@ -17,7 +17,7 @@ import H5AudioControls from 'h5-audio-controls';
 
 // service
 import loadingOverlayServiceIns from '../loadingComponent/loadingOverlay.service.ins';
-import SwiperAnimateServiceIns from '../share/Swiper/SwiperAnimate.service.ins';
+import SwiperAnimation from 'swiper-animation';
 
 export default class extends Component {
   constructor() {
@@ -73,9 +73,9 @@ export default class extends Component {
               init: () => this.renderSlideComponents()
                 .then(() => this.audioComponent.load())
                 .then(() => new loadingOverlayServiceIns().doRemove())
-                .then(() => setTimeout(() => new SwiperAnimateServiceIns().animate(this.mainSwiper), 0)),
+                .then(() => new SwiperAnimation(this.mainSwiper).animate()),
 
-              slideChange: () => setTimeout(() => new SwiperAnimateServiceIns().animate(this.mainSwiper), 0),
+              slideChange: () => setTimeout(() => new SwiperAnimation(this.mainSwiper).animate(), 0),
             },
           });
 

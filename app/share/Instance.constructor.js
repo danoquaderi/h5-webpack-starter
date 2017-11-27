@@ -3,12 +3,12 @@
  */
 
 // constructor
-import {CreateInstance} from './awesome.func';
+import CreateInstance from 'awesome-js-funcs/designPattern/CreateInstance';
 
 let Instance = () => {
   let
     _createInstance = new CreateInstance()  // 构造函数实例
-    ;
+  ;
 
   return class {
     /**
