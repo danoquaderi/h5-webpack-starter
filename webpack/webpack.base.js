@@ -25,7 +25,7 @@ module.exports = {
       'fastclick',
       'swiper',
       // 'hammerjs',
-      'three',
+      // 'three',
       path.resolve('app', 'main.js'),
     ],
   },
@@ -45,7 +45,7 @@ module.exports = {
     fastclick: 'FastClick',
     swiper: 'Swiper',
     // hammerjs: 'Hammer',
-    three: 'THREE',
+    // three: 'THREE',
   },
 
   resolve: {
@@ -58,7 +58,7 @@ module.exports = {
       'fastclick': path.resolve('node_modules', 'fastclick', 'lib', 'fastclick.js'),
       'swiper': path.resolve('node_modules', 'swiper', 'dist', 'js', 'swiper.js'),
       // 'hammerjs': path.resolve('node_modules', 'hammerjs', 'hammer.js'),
-      'three': path.resolve('node_modules', 'three', 'build', 'three.js'),
+      // 'three': path.resolve('node_modules', 'three', 'build', 'three.js'),
     },
     'extensions': ['.js']
   },
@@ -131,13 +131,13 @@ module.exports = {
       //     options: 'Hammer',
       //   }]
       // },
-      {
-        test: require.resolve('three'),
-        use: [{
-          loader: 'expose-loader',
-          options: 'THREE',
-        }]
-      },
+      // {
+      //   test: require.resolve('three'),
+      //   use: [{
+      //     loader: 'expose-loader',
+      //     options: 'THREE',
+      //   }]
+      // },
 
     ]
   },

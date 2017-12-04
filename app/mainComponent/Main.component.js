@@ -70,7 +70,8 @@ export default class extends Component {
             },
 
             on: {
-              init: () => this.renderSlideComponents()
+              init: () => Promise.resolve()
+                .then(() => setTimeout(() => this.renderSlideComponents(), 0))
                 .then(() => this.audioComponent.load())
                 .then(() => new loadingOverlayServiceIns().doRemove())
                 .then(() => new SwiperAnimation(this.mainSwiper).animate()),
