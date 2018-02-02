@@ -1,0 +1,15 @@
+//- WeChat JSSDK
+script(src="//res.wx.qq.com/open/js/jweixin-1.2.0.js")
+
+//- WeChat JSSDK config
+script.
+  (function () {
+    wx.config({
+      debug: false,
+      appId: '<%=signPackage("appId")%>',
+      timestamp: '<%=signPackage("timestamp")%>',
+      nonceStr: '<%=signPackage("nonceStr")%>',
+      signature: '<%=signPackage("signature")%>',
+      jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareQZone', 'onMenuShareWeibo']
+    });
+  })();
