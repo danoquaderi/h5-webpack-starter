@@ -1,0 +1,18 @@
+script#getByBackend.
+  (function () {
+    var wxShareConfig = {
+      appId: '<%=signPackage("appId")%>',
+      timestamp: '<%=signPackage("timestamp")%>',
+      nonceStr: '<%=signPackage("nonceStr")%>',
+      signature: '<%=signPackage("signature")%>'
+    }
+
+    sessionStorage.setItem('wxShareConfig', JSON.stringify(wxShareConfig));
+
+    setTimeout(function () {
+      wxShareConfig = null;
+
+      var getByBackend = document.getElementById('getByBackend');
+      getByBackend.parentNode.removeChild(getByBackend);
+    }, 0);
+  })();

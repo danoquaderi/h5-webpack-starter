@@ -40,7 +40,8 @@
     "swiper": "^4.1.0",
     "swiper-animation": "^1.0.0",
     "three": "^0.89.0",
-    "video.js": "^6.6.3"
+    "video.js": "^6.6.3",
+    "weixin-share": "^0.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",

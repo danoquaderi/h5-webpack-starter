@@ -3,11 +3,7 @@ import webInitialize from './webInitialize.afunc';
 import preventDefault from 'awesome-js-funcs/event/preventDefault';
 
 // wechatShare
-// import {
-//   defaultShare,
-// } from './weChatShare';
-
-// defaultShare();
+// import './weChatShare';
 
 if (DEVELOPMENT) {
   console.log('Development Mode');
