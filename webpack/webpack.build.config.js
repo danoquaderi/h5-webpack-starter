@@ -187,7 +187,7 @@ module.exports = webpackMerge(webpackBase, {
   plugins: [
     new HtmlWebpackPlugin({
       inject: false,
-      // filename: 'index.asp',
+      filename: 'index.asp',
       template: path.resolve('./static', 'view', 'index.pug'),
       minify: {
         removeComments: true,
