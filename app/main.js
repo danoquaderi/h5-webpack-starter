@@ -14,6 +14,12 @@ if (PRODUCTION) {
   console.log('Production Mode');
 }
 
+// OfflinePluginRuntime
+import * as OfflinePluginRuntime from 'offline-plugin/runtime';
+if (!DEVELOPMENT) {
+  OfflinePluginRuntime.install();
+}
+
 // contextMenu preventDefault
 document.addEventListener('contextmenu', preventDefault);
 document.addEventListener('touchmove', preventDefault, false);

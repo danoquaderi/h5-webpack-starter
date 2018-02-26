@@ -14,4 +14,6 @@ let
 ;
 
 
-new WxShare().config(wxShareConfig).share(defaultData);
+new WxShare()
+  .config(wxShareConfig)
+  .share(defaultData);
