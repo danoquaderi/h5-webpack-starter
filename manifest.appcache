@@ -1,0 +1,12 @@
+CACHE MANIFEST
+#ver:b82883a1e3666fca02f35e6ccd451552c440efa8
+#plugin:4.9.0
+
+CACHE:
+./scripts/0.chunk.cd40cf19.min.js
+./scripts/1.chunk.670cd768.min.js
+./scripts/main.bundle.d12b1f8e.min.js
+./scripts/load.bundle.daca627b.min.js
+./style/load.daca627b.min.css
+./style/main.d12b1f8e.min.css
+./favicon.ico
